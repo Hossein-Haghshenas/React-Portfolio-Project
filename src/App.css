@@ -73,6 +73,10 @@ img {
   height: auto;
 }
 
+button {
+  background: transparent;
+}
+
 @media (min-width: 1700px) {
   main .container {
     max-width: 100%;
