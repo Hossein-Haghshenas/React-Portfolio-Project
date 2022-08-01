@@ -28,6 +28,14 @@
   margin-bottom: 20px;
   display: block;
 }
+
+@media (max-width: 600px) {
+  .banner h1 {
+    font-size: 35px;
+    font-weight: 600;
+  }
+}
+
 .banner p {
   color: #b8b8b8;
   font-size: 18px;
