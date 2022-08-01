@@ -58,7 +58,7 @@ const NavBar = () => {
                 Skills
               </Nav.Link>
               <Nav.Link
-                href="#projects"
+                href="#project"
                 className={
                   activeLink === "home" ? "avtive navbar-link" : "navbar-link"
                 }
