@@ -9,7 +9,7 @@
   background: #ffffff;
   border-radius: 55px;
   color: #121212;
-  padding: 85px 125px;
+  padding: 6rem 2.5rem;
   margin-bottom: 80px;
   margin-top: -122px;
 }
@@ -26,6 +26,7 @@
   z-index: 0;
   display: flex;
   align-items: center;
+  justify-content: center;
 }
 .new-email-bx::before {
   content: "";
@@ -59,7 +60,7 @@
 }
 .new-email-bx button {
   background: linear-gradient(90.21deg, #aa367c -5.91%, #4a2fbd 111.58%);
-  padding: 20px 65px;
+  padding: 1rem 10%;
   color: #fff;
   font-weight: 500;
   letter-spacing: 0.5px;
