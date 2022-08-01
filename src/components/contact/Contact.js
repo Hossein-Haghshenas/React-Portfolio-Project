@@ -2,6 +2,8 @@ import "./Contact.css";
 import { useState } from "react";
 import { Col, Container, Row } from "react-bootstrap";
 import contactImg from "../../assets/img/contact-img.svg";
+import TrackVisibility from "react-on-screen";
+
 export const Contact = () => {
   const formInitialDetails = {
     firstName: "",
@@ -51,7 +53,17 @@ export const Contact = () => {
       <Container>
         <Row className="align-items-center">
           <Col md={6}>
-            <img src={contactImg} alt="Contact Us" />
+            <TrackVisibility>
+              {({ isVisible }) => (
+                <section
+                  className={
+                    isVisible ? "animate__animated animate__zoomIn" : ""
+                  }
+                >
+                  <img src={contactImg} alt="Contact Us" />
+                </section>
+              )}
+            </TrackVisibility>
           </Col>
           <Col md={6}>
             <h2>Get In Touch</h2>
@@ -97,9 +109,11 @@ export const Contact = () => {
                     placeholder="Message"
                     onChange={(e) => onFormUpdate("message", e.target.value)}
                   ></textarea>
-                  <button type="submit">
-                    <span>{buttonText}</span>
-                  </button>
+                  <section className="text-center text-sm-start">
+                    <button type="submit">
+                      <span>{buttonText}</span>
+                    </button>
+                  </section>
                 </Col>
                 {status.message && (
                   <Col>
